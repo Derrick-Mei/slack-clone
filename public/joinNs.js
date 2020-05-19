@@ -10,7 +10,7 @@ function joinNs(endpoint) {
       .removeEventListener("submit", formSubmission);
   }
 
-  nsSocket = io(`http://localhost:9000${endpoint}`);
+  nsSocket = io(`https://slack-clone-derrick.herokuapp.com/${endpoint}`);
   nsSocket.on("nsRoomLoad", (nsRooms) => {
     let roomList = document.querySelector(".room-list");
     roomList.innerHTML = "";
