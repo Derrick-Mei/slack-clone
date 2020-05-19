@@ -7,7 +7,7 @@ let namespaces = require("./data/namespaces");
 
 // express is used to serve public files
 app.use(express.static(__dirname + "/public"));
-const expressServer = app.listen(9000);
+const expressServer = app.listen(process.env.PORT || 9000);
 // have express listen to port 9000 and have io listen to express server
 const io = socketio(expressServer);
 
