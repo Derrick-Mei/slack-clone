@@ -49,6 +49,7 @@ function formSubmission(event) {
   event.preventDefault();
   const newMessage = document.querySelector("#user-message").value;
   nsSocket.emit("newMessageToServer", { text: newMessage });
+  document.querySelector('#user-message').value = '';
 }
 
 function buildHTML(msg) {
